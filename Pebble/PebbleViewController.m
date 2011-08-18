@@ -10,6 +10,8 @@
 
 @implementation PebbleViewController
 
+@synthesize webView;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -22,6 +24,25 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+/*
+    CGRect webFrame = [[UIScreen mainScreen] applicationFrame];  
+    webView = [[UIWebView alloc] initWithFrame:webFrame];  
+    webView.backgroundColor = [UIColor whiteColor];  
+    [self.view addSubview:webView];
+ */
+    
+    /*
+    NSString *html = @"<html><head><title>Hello World</title></head><body><p>Hello <b>World!</b>!</p></body></html>";  
+    [webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://www.jonfleming.com"]];
+     */
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"editor" ofType:@"htm"];  
+    NSData *htmlData = [NSData dataWithContentsOfFile:filePath];  
+    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSURL *baseURL = [[NSURL alloc] initFileURLWithPath:resourcePath isDirectory:YES];
+    
+    if (htmlData) {  
+        [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:baseURL];  
+    }  
 }
 
 - (void)viewDidUnload

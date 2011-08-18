@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PebbleViewController : UIViewController
+@interface PebbleViewController : UIViewController {
+    IBOutlet UIWebView *webView;
+    
+}
+
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
 
 @end

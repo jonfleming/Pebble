@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C79606BB13FC3B6000020834 /* editor.htm in Resources */ = {isa = PBXBuildFile; fileRef = C79606BA13FC3B6000020834 /* editor.htm */; };
+		C79606C013FCD09700020834 /* editor.css in Resources */ = {isa = PBXBuildFile; fileRef = C79606BF13FCD09700020834 /* editor.css */; };
+		C79606C413FCD14E00020834 /* jscripts in Resources */ = {isa = PBXBuildFile; fileRef = C79606C313FCD14E00020834 /* jscripts */; };
 		C7E1F79113FC0B20005723E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E1F79013FC0B20005723E4 /* UIKit.framework */; };
 		C7E1F79313FC0B20005723E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E1F79213FC0B20005723E4 /* Foundation.framework */; };
 		C7E1F79513FC0B20005723E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E1F79413FC0B20005723E4 /* CoreGraphics.framework */; };
@@ -37,15 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C79606BA13FC3B6000020834 /* editor.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = editor.htm; sourceTree = "<group>"; };
+		C79606BF13FCD09700020834 /* editor.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = editor.css; sourceTree = "<group>"; };
+		C79606C313FCD14E00020834 /* jscripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jscripts; sourceTree = "<group>"; };
 		C7E1F78C13FC0B1F005723E4 /* Pebble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pebble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E1F79013FC0B20005723E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C7E1F79213FC0B20005723E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7E1F79413FC0B20005723E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C7E1F79813FC0B21005723E4 /* Pebble-Info.plist */ = {isa = PBXFileReference; path = "Pebble-Info.plist"; sourceTree = "<group>"; };
+		C7E1F79813FC0B21005723E4 /* Pebble-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pebble-Info.plist"; sourceTree = "<group>"; };
 		C7E1F79A13FC0B21005723E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7E1F79C13FC0B21005723E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C7E1F79E13FC0B21005723E4 /* Pebble-Prefix.pch */ = {isa = PBXFileReference; path = "Pebble-Prefix.pch"; sourceTree = "<group>"; };
-		C7E1F79F13FC0B22005723E4 /* PebbleAppDelegate.h */ = {isa = PBXFileReference; path = PebbleAppDelegate.h; sourceTree = "<group>"; };
+		C7E1F79E13FC0B21005723E4 /* Pebble-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pebble-Prefix.pch"; sourceTree = "<group>"; };
+		C7E1F79F13FC0B22005723E4 /* PebbleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PebbleAppDelegate.h; sourceTree = "<group>"; };
 		C7E1F7A013FC0B22005723E4 /* PebbleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PebbleAppDelegate.m; sourceTree = "<group>"; };
 		C7E1F7A313FC0B23005723E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C7E1F7A613FC0B23005723E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
@@ -53,7 +59,7 @@
 		C7E1F7AA13FC0B24005723E4 /* PebbleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PebbleViewController.m; sourceTree = "<group>"; };
 		C7E1F7B113FC0B29005723E4 /* PebbleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PebbleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E1F7B213FC0B29005723E4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C7E1F7BB13FC0B2B005723E4 /* PebbleTests-Info.plist */ = {isa = PBXFileReference; path = "PebbleTests-Info.plist"; sourceTree = "<group>"; };
+		C7E1F7BB13FC0B2B005723E4 /* PebbleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PebbleTests-Info.plist"; sourceTree = "<group>"; };
 		C7E1F7BD13FC0B2B005723E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7E1F7BF13FC0B2C005723E4 /* PebbleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PebbleTests.h; sourceTree = "<group>"; };
 		C7E1F7C113FC0B2C005723E4 /* PebbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PebbleTests.m; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 		C7E1F79613FC0B20005723E4 /* Pebble */ = {
 			isa = PBXGroup;
 			children = (
+				C7F71F9113FC1E23003FCD7B /* Resources */,
 				C7E1F79F13FC0B22005723E4 /* PebbleAppDelegate.h */,
 				C7E1F7A013FC0B22005723E4 /* PebbleAppDelegate.m */,
 				C7E1F7A213FC0B23005723E4 /* MainStoryboard_iPhone.storyboard */,
@@ -156,6 +163,16 @@
 				C7E1F7BC13FC0B2B005723E4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7F71F9113FC1E23003FCD7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C79606C313FCD14E00020834 /* jscripts */,
+				C79606BF13FCD09700020834 /* editor.css */,
+				C79606BA13FC3B6000020834 /* editor.htm */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +246,9 @@
 				C7E1F7A413FC0B23005723E4 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C7E1F7A713FC0B23005723E4 /* MainStoryboard_iPad.storyboard in Resources */,
 				C7E1F7A913FC0B24005723E4 /* PebbleViewController.h in Resources */,
+				C79606BB13FC3B6000020834 /* editor.htm in Resources */,
+				C79606C013FCD09700020834 /* editor.css in Resources */,
+				C79606C413FCD14E00020834 /* jscripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +466,7 @@
 				C7E1F7C713FC0B2D005723E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7E1F7C813FC0B2D005723E4 /* Build configuration list for PBXNativeTarget "PebbleTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +475,7 @@
 				C7E1F7CA13FC0B2D005723E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
