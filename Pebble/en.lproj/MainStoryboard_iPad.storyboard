@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1881" systemVersion="10K540" targetRuntime="iOS.CocoaTouch.iPad" nextObjectID="10" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1881" systemVersion="10K540" targetRuntime="iOS.CocoaTouch.iPad" nextObjectID="21" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="876"/>
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="8">
-                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
+                                <rect key="frame" x="0.0" y="88" width="768" height="936"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -22,7 +22,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="7"/>
+                                    <barButtonItem title="Documents" id="7"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="10">
+                                <rect key="frame" x="127" y="8" width="507" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="11">
+                                <rect key="frame" x="0.0" y="44" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem tag="1" image="icon_font_bold.png" width="30" id="12"/>
+                                    <barButtonItem tag="2" image="icon_font_italic.png" width="30" id="13"/>
+                                    <barButtonItem tag="3" image="icon_font_underline.png" width="30" id="14"/>
+                                    <barButtonItem tag="4" image="icon_list_bullets.png" width="30" id="15"/>
+                                    <barButtonItem tag="5" image="icon_list_numbers.png" width="30" id="16"/>
+                                    <barButtonItem tag="6" image="icon_text_align_left.png" width="30" id="17"/>
+                                    <barButtonItem image="icon_text_align_center.png" width="30" id="18"/>
+                                    <barButtonItem image="icon_text_align_right.png" width="30" id="19"/>
+                                    <barButtonItem image="icon_text_align_justify.png" width="30" id="20"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -38,8 +60,20 @@
                     </connections>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="-84" y="-240"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_font_bold.png" width="30" height="30"/>
+        <image name="icon_font_italic.png" width="30" height="30"/>
+        <image name="icon_font_underline.png" width="30" height="30"/>
+        <image name="icon_list_bullets.png" width="30" height="30"/>
+        <image name="icon_list_numbers.png" width="30" height="30"/>
+        <image name="icon_text_align_center.png" width="30" height="30"/>
+        <image name="icon_text_align_justify.png" width="30" height="30"/>
+        <image name="icon_text_align_left.png" width="30" height="30"/>
+        <image name="icon_text_align_right.png" width="30" height="30"/>
+    </resources>
     <classes>
         <class className="PebbleViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PebbleViewController.h"/>

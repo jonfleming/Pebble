@@ -6,6 +6,8 @@
 <!-- TinyMCE -->
 <script type="text/javascript" src="jscripts/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript">
+    var height = window.innerHeight - 80;
+    
 	tinyMCE.init({
 		// General options
 		mode : "textareas",
@@ -22,7 +24,9 @@
 		theme_advanced_toolbar_align : "left",
 	
 		// Example word content CSS (should be your site CSS) this one removes paragraph margins
-		content_css : "editor.css"
+		content_css : "editor.css",
+                 
+        height : height
 
 	});
 </script>
@@ -34,13 +38,6 @@
 <form method="post" action="index.htm">
 	<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
 	<textarea id="elm1" name="elm1" rows="10" cols="40" style="height: 100%; width: 100%;">
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
-        &lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;&lt;p/&gt;
 	</textarea>
 </form>
 <script type="text/javascript">
