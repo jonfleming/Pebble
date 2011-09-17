@@ -45,9 +45,37 @@
     }  
 }
 
-- (void)viewDidUnload
+- (IBAction)PJBold:(id)sender
 {
-    [super viewDidUnload];
+    [webView stringByEvaluatingJavaScriptFromString:@"pjBold();"];
+}
+
+- (IBAction)PJItalic:(id)sender
+{
+    [webView stringByEvaluatingJavaScriptFromString:@"pjItalic();"];
+}
+
+- (IBAction)PJUnderline:(id)sender
+{
+    [webView stringByEvaluatingJavaScriptFromString:@"pjUnderline();"];    
+}
+
+- (IBAction)PJUnorderedList:(id)sender
+{
+    [webView stringByEvaluatingJavaScriptFromString:@"pjUnorderedList()"];
+}
+
+- (IBAction)PJOrderedList:(id)sender
+{
+    [webView stringByEvaluatingJavaScriptFromString:@"pjOrderedList()"];    
+}
+
+- (IBAction)PJTest:(id)sender {
+    [webView stringByEvaluatingJavaScriptFromString:@"pjItalic();"];
+}
+
+- (void)viewDidUnload
+{    [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

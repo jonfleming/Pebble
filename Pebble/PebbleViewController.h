@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface PebbleViewController : UIViewController {
-    IBOutlet UIWebView *webView;
-    
+    IBOutlet UIWebView *webView;    
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
+
+- (IBAction)PJBold:(id)sender;
+- (IBAction)PJItalic:(id)sender;
+- (IBAction)PJUnderline:(id)sender;
+- (IBAction)PJUnorderedList:(id)sender;
+- (IBAction)PJOrderedList:(id)sender;
+- (IBAction)PJTest:(id)sender;
 
 @end

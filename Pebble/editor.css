@@ -1,7 +1,7 @@
 body {
 	background-color: #FFFFFF;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 14px;
 	scrollbar-3dlight-color: #F0F0EE;
 	scrollbar-arrow-color: #676662;
 	scrollbar-base-color: #F0F0EE;
@@ -19,22 +19,22 @@ p {margin:0; padding:0;}
 
 td {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 14px;
 }
 
 pre {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 14px;
 }
 
 .example1 {
 	font-weight: bold;
-	font-size: 14px
+	font-size: 16px
 }
 
 .example2 {
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 14px;
 	color: #FF0000
 }
 
@@ -52,5 +52,5 @@ tfoot {
 
 th {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
+	font-size: 16px;
 }

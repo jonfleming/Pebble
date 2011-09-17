@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1881" systemVersion="10K540" targetRuntime="iOS.CocoaTouch.iPad" nextObjectID="21" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1881" systemVersion="10K540" targetRuntime="iOS.CocoaTouch.iPad" nextObjectID="35" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="876"/>
@@ -27,7 +27,7 @@
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="10">
                                 <rect key="frame" x="127" y="8" width="507" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,15 +36,39 @@
                                 <rect key="frame" x="0.0" y="44" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem tag="1" image="icon_font_bold.png" width="30" id="12"/>
-                                    <barButtonItem tag="2" image="icon_font_italic.png" width="30" id="13"/>
-                                    <barButtonItem tag="3" image="icon_font_underline.png" width="30" id="14"/>
-                                    <barButtonItem tag="4" image="icon_list_bullets.png" width="30" id="15"/>
-                                    <barButtonItem tag="5" image="icon_list_numbers.png" width="30" id="16"/>
-                                    <barButtonItem tag="6" image="icon_text_align_left.png" width="30" id="17"/>
-                                    <barButtonItem image="icon_text_align_center.png" width="30" id="18"/>
-                                    <barButtonItem image="icon_text_align_right.png" width="30" id="19"/>
-                                    <barButtonItem image="icon_text_align_justify.png" width="30" id="20"/>
+                                    <barButtonItem tag="4" image="icon_font_bold.png" width="32" id="12">
+                                        <connections>
+                                            <action selector="PJBold:" destination="2" id="22"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="13" image="icon_font_italic.png" width="32" id="31">
+                                        <connections>
+                                            <action selector="PJItalic:" destination="2" id="33"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="6" image="icon_font_underline.png" width="32" id="32">
+                                        <connections>
+                                            <action selector="PJUnderline:" destination="2" id="34"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="7" image="icon_list_bullets.png" width="32" id="15">
+                                        <connections>
+                                            <action selector="PJUnorderdList:" destination="2" id="25"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="8" image="icon_list_numbers.png" width="32" id="16">
+                                        <connections>
+                                            <action selector="PJOrderedList:" destination="2" id="26"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="9" image="icon_text_align_left.png" width="32" id="17"/>
+                                    <barButtonItem tag="10" image="icon_text_align_center.png" width="32" id="18">
+                                        <connections>
+                                            <action selector="PJTest:" destination="2" id="27"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="11" image="icon_text_align_right.png" width="32" id="19"/>
+                                    <barButtonItem tag="12" image="icon_text_align_justify.png" width="32" id="20"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -78,6 +102,12 @@
         <class className="PebbleViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PebbleViewController.h"/>
             <relationships>
+                <relationship kind="action" name="PJBold:"/>
+                <relationship kind="action" name="PJItalic:"/>
+                <relationship kind="action" name="PJOrderedList:"/>
+                <relationship kind="action" name="PJTest:"/>
+                <relationship kind="action" name="PJUnderline:"/>
+                <relationship kind="action" name="PJUnorderedList:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
