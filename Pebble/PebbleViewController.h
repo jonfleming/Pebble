@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PebbleViewController : UIViewController {
+@interface PebbleViewController : UIViewController <UIWebViewDelegate> {
     IBOutlet UIWebView *webView;    
 }
 
@@ -20,5 +20,8 @@
 - (IBAction)PJUnorderedList:(id)sender;
 - (IBAction)PJOrderedList:(id)sender;
 - (IBAction)PJTest:(id)sender;
+
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest: (NSURLRequest*)req  navigationType:(UIWebViewNavigationType)navigationType;
+
 
 @end

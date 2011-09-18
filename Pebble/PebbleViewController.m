@@ -43,6 +43,7 @@
     if (htmlData) {  
         [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:baseURL];  
     }  
+    webView.delegate = self;
 }
 
 - (IBAction)PJBold:(id)sender
@@ -70,12 +71,24 @@
     [webView stringByEvaluatingJavaScriptFromString:@"pjOrderedList()"];    
 }
 
-- (IBAction)PJTest:(id)sender {
+- (IBAction)PJTest:(id)sender 
+{
     [webView stringByEvaluatingJavaScriptFromString:@"pjItalic();"];
 }
 
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest: (NSURLRequest*)req  navigationType:(UIWebViewNavigationType)navigationType 
+{
+    if ([[[req URL] host] isEqualToString:@"debugger"])
+    {
+        NSLog(@"webView: %@", [[req URL] resourceSpecifier]);
+        return false;
+    }
+    return true;
+}
+
 - (void)viewDidUnload
-{    [super viewDidUnload];
+{   [super viewDidUnload];
+    webView.delegate = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

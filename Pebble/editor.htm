@@ -38,6 +38,11 @@
             function pjReplace(text) {tinyMCE.execCommand('mceReplaceContent',false,text);}
             function pjUnorderedList() {tinyMCE.execCommand('insertUnorderedList');}
             function pjOrderedList() {tinyMCE.execCommand('insertOrderedList');}
+            
+            function pjLog(text) 
+            {
+                document.location.href = "http://debugger/" + encodeURIComponent(text);
+            }
         </script>
     </body>
 </html>
