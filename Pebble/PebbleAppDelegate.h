@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PebbleViewController.h"
 
 @interface PebbleAppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    PebbleViewController *viewController;
+}
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) IBOutlet PebbleViewController *viewController;
 
 @end

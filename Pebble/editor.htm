@@ -39,6 +39,8 @@
             function pjUnorderedList() {tinyMCE.execCommand('insertUnorderedList');}
             function pjOrderedList() {tinyMCE.execCommand('insertOrderedList');}
             
+            function pjGetContent() {return tinyMCE.activeEditor.getContent();}
+            function pjSetContent(text) {tinyMCE.activeEditor.setContent(text);}            
             function pjLog(text) 
             {
                 document.location.href = "http://debugger/" + encodeURIComponent(text);

@@ -21,6 +21,12 @@
 - (IBAction)PJOrderedList:(id)sender;
 - (IBAction)PJTest:(id)sender;
 
+- (NSString *)PJGetContent;
+- (void)PJSetContent: (NSString *)text;
+- (NSString *)getDocumentsDirectory;
+- (void)Save;
+- (void)Load;
+
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest: (NSURLRequest*)req  navigationType:(UIWebViewNavigationType)navigationType;
 
 

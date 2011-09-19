@@ -7,6 +7,7 @@
 //
 
 #import "PebbleViewController.h"
+#import "PebbleAppDelegate.h"
 
 @implementation PebbleViewController
 
@@ -44,8 +45,14 @@
         [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:baseURL];  
     }  
     webView.delegate = self;
+    
+    PebbleAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.viewController = self;
+    
+    [self Load];
 }
 
+#pragma mark - JavaScript Interface
 - (IBAction)PJBold:(id)sender
 {
     [webView stringByEvaluatingJavaScriptFromString:@"pjBold();"];
@@ -76,8 +83,53 @@
     [webView stringByEvaluatingJavaScriptFromString:@"pjItalic();"];
 }
 
+#pragma mark - Document Handling
+- (NSString *)PJGetContent
+{
+    NSString *text = [webView stringByEvaluatingJavaScriptFromString:@"pjGetContent();"];
+    NSLog(@"%s: %@", __FUNCTION__, text);
+    return text;
+}
+
+- (void)PJSetContent: (NSString *)text
+{
+    NSString *script = [NSString stringWithFormat:@"pjSetContent('%@');", text];
+    [webView stringByEvaluatingJavaScriptFromString:script];
+    NSLog(@"%s: %@", __FUNCTION__, script);
+}
+
+- (NSString *)getDocumentsDirectory 
+{  
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);  
+    return [paths objectAtIndex:0];  
+}  
+
+- (void)Save
+{
+    NSLog(@"%s", __FUNCTION__);
+    NSString *filePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:@"temp.txt"];
+    NSString *text = [self PJGetContent];
+    [text writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error: nil];
+    
+    NSLog(@"Text: %@", text);
+}
+
+- (void)Load
+{
+    NSLog(@"%s", __FUNCTION__);
+    NSString *filePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:@"temp.txt"];    
+    NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    if (text) 
+    {
+        [self PJSetContent:text];
+        NSLog(@"Text: %@", text);
+    }
+}
+
+#pragma mark - Debugging
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest: (NSURLRequest*)req  navigationType:(UIWebViewNavigationType)navigationType 
 {
+    NSLog(@"%s", __FUNCTION__);
     if ([[[req URL] host] isEqualToString:@"debugger"])
     {
         NSLog(@"webView: %@", [[req URL] resourceSpecifier]);
@@ -87,7 +139,9 @@
 }
 
 - (void)viewDidUnload
-{   [super viewDidUnload];
+{   
+    NSLog(@"%s", __FUNCTION__);
+    [super viewDidUnload];
     webView.delegate = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
