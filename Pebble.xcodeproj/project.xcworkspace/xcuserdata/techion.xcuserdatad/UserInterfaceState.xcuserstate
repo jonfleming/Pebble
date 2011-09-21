@@ -3504,7 +3504,7 @@
 		</dict>
 		<string>IDEWorkspaceTabController_42D00105-8B41-47E6-BB3D-6080A2351D33</string>
 		<string>IDEWorkspaceWindowControllerUniqueIdentifier</string>
-		<string>{{0, 4}, {1440, 874}}</string>
+		<string>{{-4, 4}, {1440, 874}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4074,7 +4074,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>355</real>
+		<real>286</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4104,7 +4104,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>812</real>
+		<real>881</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4173,7 +4173,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>355</real>
+		<real>286</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4203,7 +4203,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>812</real>
+		<real>881</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4514,9 +4514,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>338100967.55376202</real>
-		<string>{654, 1702}</string>
-		<string>{2035, 0}</string>
+		<real>338276829.08655298</real>
+		<string>{1226, 1550}</string>
+		<string>{2743, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9265,9 +9265,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>338100967.55053598</real>
-		<string>{654, 1702}</string>
-		<string>{2035, 0}</string>
+		<real>338276828.957412</real>
+		<string>{1226, 1550}</string>
+		<string>{2743, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -9360,9 +9360,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>338100962.50462699</real>
-		<string>{0, 1013}</string>
-		<string>{684, 0}</string>
+		<real>338275955.01301801</real>
+		<string>{3296, 1183}</string>
+		<string>{4089, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -10021,7 +10021,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>774</integer>
+					<integer>91</integer>
 				</dict>
 			</array>
 		</dict>
@@ -10285,7 +10285,7 @@
 				<integer>791</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>338100541.31453198</real>
+			<real>338276596.40899903</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -10296,7 +10296,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 9:49 PM</string>
+		<string>Today at 10:43 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>

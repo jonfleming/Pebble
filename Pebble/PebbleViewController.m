@@ -130,9 +130,16 @@
 - (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest: (NSURLRequest*)req  navigationType:(UIWebViewNavigationType)navigationType 
 {
     NSLog(@"%s", __FUNCTION__);
-    if ([[[req URL] host] isEqualToString:@"debugger"])
+    NSURL *url = [req URL];
+    NSLog(@"  host: %@", [url host]);
+    NSLog(@"  path: %@", [url path]);
+    NSLog(@"  lastPathComponent: %@", [url lastPathComponent]);
+    NSLog(@"  pathExtension: %@", [url pathExtension]);
+    NSLog(@"  query: %@", [url query]);
+
+    if ([[url host] isEqualToString:@"debugger"])
     {
-        NSLog(@"webView: %@", [[req URL] resourceSpecifier]);
+        NSLog(@": %@", [[req URL] resourceSpecifier]);
         return false;
     }
     return true;
