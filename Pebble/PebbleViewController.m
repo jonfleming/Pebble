@@ -48,8 +48,6 @@
     
     PebbleAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.viewController = self;
-    
-    [self Load];
 }
 
 #pragma mark - JavaScript Interface
@@ -135,11 +133,16 @@
     NSLog(@"  path: %@", [url path]);
     NSLog(@"  lastPathComponent: %@", [url lastPathComponent]);
     NSLog(@"  pathExtension: %@", [url pathExtension]);
-    NSLog(@"  query: %@", [url query]);
+    NSLog(@"  absolute: %@", [url absoluteString]);
 
     if ([[url host] isEqualToString:@"debugger"])
     {
-        NSLog(@": %@", [[req URL] resourceSpecifier]);
+        NSLog(@": %@", [url lastPathComponent]);
+        return false;
+    }
+    if ([[url host] isEqualToString:@"ready"])
+    {
+        [self Load];
         return false;
     }
     return true;
